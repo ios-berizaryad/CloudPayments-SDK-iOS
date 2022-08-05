@@ -108,7 +108,9 @@ public struct Card {
             return false
         }
 
-        guard aNewDate.compare(Date()) == .orderedDescending else {
+        let dateNow = dateFormatter.date(from: "02/22")!
+
+        guard aNewDate.compare(dateNow) == .orderedDescending else {
             return false
         }
 
